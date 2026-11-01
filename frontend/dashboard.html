@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard | SecureSpace</title>
+  <link rel="stylesheet" href="./css/style.css" />
+  <script src="./js/api.js" defer></script>
+  <script src="./js/dashboard.js" defer></script>
+</head>
+<body class="dashboard-page">
+
+  <nav class="dashboard-nav">
+    <div class="brand">
+      <span class="brand-icon">S</span>
+      <span>SecureSpace</span>
+    </div>
+    <div class="btn-container">  
+    <button onclick="goBack()" id="back-btn">Back</button>
+
+    <button class="logout-btn" id="logout-btn" type="button">
+      Sign Out ↗
+    </button>
+    </div>
+  </nav>
+
+  <main class="dashboard-main">
+    <section class="dashboard-heading">
+      <span class="eyebrow">YOUR PERSONAL SPACE</span>
+      <h1 id="welcome-title">Welcome back!</h1>
+      <p>Your account is ready. Here's your personal overview.</p>
+    </section>
+
+    <section class="dashboard-card">
+      <div class="profile-header">
+        <div class="avatar" id="avatar">U</div>
+        <div>
+          <h2 id="profile-name">Loading profile...</h2>
+          <p id="profile-email">Please wait</p>
+        </div>
+      </div>
+
+      <h3 class="section-title">Account information</h3>
+
+      <div class="profile-detail">
+        <span>Full name</span>
+        <span id="detail-name">Loading...</span>
+      </div>
+
+      <div class="profile-detail">
+        <span>Email address</span>
+        <span id="detail-email">Loading...</span>
+      </div>
+
+      <div class="profile-detail">
+        <span>Account status</span>
+        <span>Authenticated</span>
+      </div>
+    </section>
+
+    <section class="dashboard-card">
+      <h3 class="section-title">Your security</h3>
+      <div class="security-note">
+        ✓ You accessed this page through an authenticated session.
+        Your account details were retrieved from the backend.
+      </div>
+    </section>
+
+    <p class="message" id="dashboard-message"
+      role="status" aria-live="polite"></p>
+  </main>
+
+</body>
+</html>
