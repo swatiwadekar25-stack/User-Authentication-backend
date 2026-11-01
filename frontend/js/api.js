@@ -1,5 +1,5 @@
 const AuthApi = (() => {
-  const BASE_URL = "http://localhost:5000/api/auth";
+  const BASE_URL = 'https://user-authentication-backend-z44g.onrender.com/api/auth';
   const TOKEN_KEY = "authToken";
 
   function getToken() {

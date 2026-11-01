@@ -17,7 +17,10 @@ if (!process.env.MONGO_URI || !process.env.JWT_SECRET) {
 
 app.use(
   cors({
-    origin: process.env.CLIENT_URL || "http://127.0.0.1:5500"
+    origin: [
+      "http://127.0.0.1:5500",
+      "https://user-authentication-backend-fronten.vercel.app"
+    ]
   })
 );
 
